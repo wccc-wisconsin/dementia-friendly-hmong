@@ -267,6 +267,7 @@
       transform: translate(-50%, -50%);
       pointer-events: none;
       opacity: 0.56;
+      z-index: 0;
     }
 
     .hero-video iframe {
@@ -278,6 +279,7 @@
     .hero-fallback {
       position: absolute;
       inset: 0;
+      z-index: 0;
       background:
         radial-gradient(circle at 20% 20%, rgba(250,204,21,0.26), transparent 28%),
         radial-gradient(circle at 75% 30%, rgba(15,118,110,0.35), transparent 30%),
@@ -287,6 +289,7 @@
     .hero-overlay {
       position: absolute;
       inset: 0;
+      z-index: 1;
       background:
         linear-gradient(180deg, rgba(0,0,0,0.52), rgba(49,46,129,0.62) 58%, rgba(15,118,110,0.74)),
         radial-gradient(circle at center, transparent 0, rgba(0,0,0,0.25) 70%);
@@ -939,7 +942,7 @@
       <div class="hero-fallback" aria-hidden="true"></div>
       <div class="hero-video" aria-hidden="true">
         <iframe
-          src="https://www.youtube.com/embed/KaY9ybbNNC4?autoplay=1&mute=1&loop=1&playlist=KaY9ybbNNC4&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+          src="https://www.youtube.com/embed/KaY9ybbNNC4?autoplay=1&mute=1&loop=1&playlist=KaY9ybbNNC4&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&iv_load_policy=3&fs=0"
           title="Background video: My Mother Kuv Nam, A Hmong Story on Dementia"
           allow="autoplay; encrypted-media; picture-in-picture; web-share">
         </iframe>
