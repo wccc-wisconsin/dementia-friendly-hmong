@@ -266,13 +266,8 @@
       min-height: 100%;
       transform: translate(-50%, -50%);
       pointer-events: none;
-      opacity: 0;
+      opacity: 0.56;
       z-index: 0;
-      animation: videoFadeIn 1s ease 2.5s forwards;
-    }
-
-    @keyframes videoFadeIn {
-      to { opacity: 0.56; }
     }
 
     .hero-video iframe {
@@ -947,8 +942,7 @@
       <div class="hero-fallback" aria-hidden="true"></div>
       <div class="hero-video" aria-hidden="true">
         <iframe
-          id="heroBgVideo"
-          data-src="https://www.youtube.com/embed/KaY9ybbNNC4?autoplay=1&mute=1&loop=1&playlist=KaY9ybbNNC4&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&iv_load_policy=3&fs=0"
+          src="https://www.youtube.com/embed/KaY9ybbNNC4?autoplay=1&mute=1&loop=1&playlist=KaY9ybbNNC4&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&iv_load_policy=3&fs=0"
           title="Background video: My Mother Kuv Nam, A Hmong Story on Dementia"
           allow="autoplay; encrypted-media; picture-in-picture; web-share">
         </iframe>
@@ -1441,11 +1435,6 @@
 
     collectTextNodes(document.body);
 
-    // Delay-load the hero background video so YouTube's UI never flashes on page load
-    setTimeout(function () {
-      var iframe = document.getElementById('heroBgVideo');
-      if (iframe) iframe.src = iframe.dataset.src;
-    }, 2000);
 
     languageSelect.addEventListener('change', function () {
       setLanguage(this.value);
