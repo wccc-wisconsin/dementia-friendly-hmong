@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Building a Dementia Friendly Hmong Community and Beyond</title>
+  <meta name="description" content="A Milwaukee community education initiative supporting Hmong families, caregivers, and older adults through dementia awareness, the My Mother Kuv Nam film, local resources, and an October 29 event." />
+  <meta property="og:title" content="Building a Dementia Friendly Hmong Community and Beyond" />
+  <meta property="og:description" content="Community education, dementia awareness, caregiver support, and local Milwaukee County resources for Hmong families." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#312e81" />
+
+  <style>
+    :root {
+      --ink: #111827;
+      --muted: #5b6472;
+      --line: #e5e7eb;
+      --soft: #f8fafc;
+      --soft-blue: #eef2ff;
+      --purple: #312e81;
+      --purple-2: #6d28d9;
+      --teal: #0f766e;
+      --gold: #facc15;
+      --white: #ffffff;
+      --shadow: 0 18px 50px rgba(15, 23, 42, 0.12);
+      --radius: 28px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    img { max-width: 100%; display: block; }
+
+    .page { overflow: hidden; }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 88px 0;
+      position: relative;
+    }
+
+    .section.soft { background: var(--soft); }
+
+    .section.blue { background: var(--soft-blue); }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--teal);
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      max-width: 840px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .section-title h2 {
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      line-height: 1.08;
+      margin: 0 0 16px;
+      color: var(--purple);
+      letter-spacing: -0.04em;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      font-size: 1.08rem;
+      margin: 0 auto;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 22px;
+      min-height: 50px;
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #1f2937;
+      box-shadow: 0 12px 30px rgba(250, 204, 21, 0.28);
+    }
+
+    .btn-dark {
+      background: var(--purple);
+      color: var(--white);
+      box-shadow: 0 12px 30px rgba(49, 46, 129, 0.24);
+    }
+
+    .btn-light {
+      background: rgba(255,255,255,0.92);
+      color: var(--purple);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--purple);
+      border: 1px solid rgba(49, 46, 129, 0.25);
+    }
+
+    .topbar {
+      position: fixed;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 50;
+      width: min(1120px, calc(100% - 32px));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 10px 12px 10px 18px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.86);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255,255,255,0.4);
+      box-shadow: 0 12px 35px rgba(15,23,42,0.12);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      color: var(--purple);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--purple), var(--teal));
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 0.8rem;
+      font-weight: 900;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    .nav a {
+      text-decoration: none;
+      padding: 8px 8px;
+      border-radius: 999px;
+    }
+
+    .nav a:hover { background: #eef2ff; color: var(--purple); }
+
+    .language-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    .language-select {
+      border: 1px solid #d1d5db;
+      border-radius: 999px;
+      padding: 8px 34px 8px 12px;
+      background: white;
+      color: #1f2937;
+      font-weight: 700;
+      max-width: 155px;
+    }
+
+    .google-translate-btn {
+      border: 1px solid #d1d5db;
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: #f8fafc;
+      color: #1f2937;
+      font-weight: 800;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: 0.2s ease;
+    }
+
+    .google-translate-btn:hover {
+      background: #eef2ff;
+      border-color: rgba(109, 40, 217, 0.35);
+      color: var(--purple);
+    }
+
+    .mobile-note {
+      display: none;
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-align: center;
+      padding: 10px 16px;
+      background: #fff7ed;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+      background: #111827;
+      padding: 160px 0 90px;
+    }
+
+    .hero-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 177.777vh;
+      height: 56.25vw;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      opacity: 0.56;
+    }
+
+    .hero-video iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .hero-fallback {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(250,204,21,0.26), transparent 28%),
+        radial-gradient(circle at 75% 30%, rgba(15,118,110,0.35), transparent 30%),
+        linear-gradient(135deg, #111827, #312e81 50%, #0f766e);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0.52), rgba(49,46,129,0.62) 58%, rgba(15,118,110,0.74)),
+        radial-gradient(circle at center, transparent 0, rgba(0,0,0,0.25) 70%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: min(1050px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .hero .eyebrow {
+      color: #fef3c7;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.24);
+      padding: 10px 14px;
+      border-radius: 999px;
+      backdrop-filter: blur(12px);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.6rem, 7.2vw, 6.3rem);
+      line-height: 0.98;
+      margin: 18px auto 22px;
+      letter-spacing: -0.07em;
+      max-width: 1050px;
+      text-wrap: balance;
+    }
+
+    .hero .lead {
+      font-size: clamp(1.08rem, 2vw, 1.35rem);
+      max-width: 850px;
+      margin: 0 auto;
+      color: rgba(255,255,255,0.93);
+    }
+
+    .hero-event-card {
+      max-width: 760px;
+      margin: 34px auto 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      overflow: hidden;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.26);
+      background: rgba(255,255,255,0.16);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 24px 70px rgba(0,0,0,0.22);
+    }
+
+    .event-chip {
+      padding: 18px 16px;
+      background: rgba(255,255,255,0.12);
+    }
+
+    .event-chip span {
+      display: block;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #fde68a;
+      font-weight: 900;
+      margin-bottom: 4px;
+    }
+
+    .event-chip strong {
+      display: block;
+      font-size: 1.05rem;
+      color: white;
+    }
+
+    .scroll-cue {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.78);
+      text-decoration: none;
+    }
+
+    .grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+    .card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 10px 35px rgba(15, 23, 42, 0.06);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      color: var(--purple);
+      font-size: 1.28rem;
+      line-height: 1.2;
+    }
+
+    .card p { color: var(--muted); margin: 0; }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: var(--soft-blue);
+      margin-bottom: 18px;
+      font-size: 1.45rem;
+    }
+
+    .event-feature {
+      margin-top: -70px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .event-panel {
+      background: white;
+      border-radius: 36px;
+      padding: 42px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(226,232,240,0.8);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .event-panel:before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 10px;
+      background: linear-gradient(90deg, var(--teal), var(--purple-2), var(--gold));
+    }
+
+    .event-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .event-panel h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.05em;
+      margin: 0 0 18px;
+      color: var(--purple);
+    }
+
+    .event-meta {
+      display: grid;
+      gap: 12px;
+      margin: 26px 0;
+    }
+
+    .meta-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 16px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      font-weight: 700;
+    }
+
+    .event-highlights {
+      background: var(--soft-blue);
+      border: 1px solid rgba(49,46,129,0.15);
+      border-radius: 26px;
+      padding: 24px;
+    }
+
+    .event-highlights h3 { margin-top: 0; color: var(--purple); }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .pill-list li {
+      padding: 9px 12px;
+      background: white;
+      border: 1px solid rgba(49,46,129,0.15);
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.9rem;
+      color: #334155;
+    }
+
+    .film-section {
+      background: linear-gradient(135deg, #111827, #312e81 60%, #0f766e);
+      color: white;
+    }
+
+    .film-section .section-title h2,
+    .film-section .section-title p { color: white; }
+    .film-section .section-title p { color: rgba(255,255,255,0.84); }
+    .film-section .eyebrow { color: #fde68a; }
+
+    .video-wrap {
+      width: min(980px, 100%);
+      margin: 34px auto 0;
+      aspect-ratio: 16 / 9;
+      border-radius: 30px;
+      overflow: hidden;
+      background: #020617;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .video-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .learn-card ul,
+    .resource-card ul {
+      margin: 14px 0 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    .learn-card li,
+    .resource-card li { margin-bottom: 7px; }
+
+    .slow-wrapper {
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+
+    .slow-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .slow-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 22px 12px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(15,23,42,0.05);
+    }
+
+    .slow-card strong {
+      display: block;
+      font-size: 2.25rem;
+      line-height: 1;
+      color: var(--purple-2);
+      margin-bottom: 8px;
+    }
+
+    .slow-card span {
+      display: block;
+      color: var(--muted);
+      font-weight: 800;
+      font-size: 0.92rem;
+    }
+
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .partner-card {
+      min-height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+      border-radius: 24px;
+      background: white;
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 30px rgba(15,23,42,0.05);
+    }
+
+    .partner-initial {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--purple), var(--teal));
+      color: white;
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+
+    .partner-card h3 {
+      font-size: 1rem;
+      line-height: 1.2;
+      margin: 0;
+      color: var(--purple);
+    }
+
+    .partner-card p {
+      margin: 10px 0 0;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .download-card {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      justify-content: space-between;
+    }
+
+    .download-card .doc-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 18px;
+      background: #fef3c7;
+      display: grid;
+      place-items: center;
+      font-size: 1.65rem;
+    }
+
+    .contact-line {
+      margin-top: 14px;
+      display: grid;
+      gap: 8px;
+      color: var(--muted);
+    }
+
+    .contact-line strong { color: var(--ink); }
+
+    .acknowledgement {
+      background:
+        radial-gradient(circle at 20% 15%, rgba(250,204,21,0.20), transparent 26%),
+        linear-gradient(135deg, #eef2ff, #ecfeff);
+    }
+
+    .ack-panel {
+      max-width: 980px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.82);
+      border: 1px solid rgba(226,232,240,0.85);
+      box-shadow: var(--shadow);
+      border-radius: 34px;
+      padding: 42px;
+      text-align: center;
+      backdrop-filter: blur(12px);
+    }
+
+    .ack-panel h2 {
+      color: var(--purple);
+      margin: 0 0 16px;
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+    }
+
+    .ack-panel p {
+      color: #475569;
+      font-size: 1.05rem;
+      margin: 0 auto 18px;
+    }
+
+    .ack-rule {
+      width: 120px;
+      height: 2px;
+      border: 0;
+      margin: 30px auto;
+      background: linear-gradient(90deg, transparent, var(--purple-2), transparent);
+    }
+
+    .final-cta {
+      background: linear-gradient(135deg, var(--teal), var(--purple));
+      color: white;
+      text-align: center;
+      padding: 90px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .final-cta:before {
+      content: "";
+      position: absolute;
+      inset: auto -10% -55% -10%;
+      height: 90%;
+      background: radial-gradient(circle, rgba(255,255,255,0.16), transparent 55%);
+    }
+
+    .final-cta .container { position: relative; z-index: 1; }
+
+    .final-cta h2 {
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: 1.05;
+      letter-spacing: -0.05em;
+      max-width: 900px;
+      margin: 0 auto 18px;
+    }
+
+    .final-cta p {
+      color: rgba(255,255,255,0.88);
+      max-width: 790px;
+      margin: 0 auto;
+      font-size: 1.15rem;
+    }
+
+    .translation-box {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 60;
+      width: min(360px, calc(100% - 36px));
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      padding: 18px;
+      display: none;
+    }
+
+    .translation-box.open { display: block; }
+
+    .translation-box h3 {
+      margin: 0 0 8px;
+      color: var(--purple);
+    }
+
+    .translation-box p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .translation-box textarea {
+      width: 100%;
+      min-height: 100px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px;
+      resize: vertical;
+      font-family: inherit;
+    }
+
+    .translation-actions {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .google-language-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin: 12px 0;
+    }
+
+    .google-language-grid a {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 9px 10px;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      color: var(--ink);
+      font-weight: 750;
+      font-size: 0.9rem;
+    }
+
+    .google-language-grid a:hover {
+      border-color: rgba(109, 40, 217, 0.35);
+      background: #f5f3ff;
+      color: var(--purple);
+    }
+
+    .tiny-btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 9px 12px;
+      font-weight: 800;
+      cursor: pointer;
+      background: var(--purple);
+      color: white;
+    }
+
+    .tiny-btn.secondary {
+      background: #f1f5f9;
+      color: #334155;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: -60px;
+      z-index: 100;
+      background: white;
+      color: var(--purple);
+      padding: 10px 12px;
+      border-radius: 10px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .skip-link:focus { top: 16px; }
+
+    @media (max-width: 980px) {
+      .nav { display: none; }
+      .mobile-note { display: block; }
+      .grid-2, .grid-3, .grid-4, .event-layout { grid-template-columns: 1fr; }
+      .partners-grid { grid-template-columns: repeat(2, 1fr); }
+      .slow-grid { grid-template-columns: repeat(3, 1fr); }
+      .hero-event-card { grid-template-columns: 1fr; max-width: 520px; }
+      .event-feature { margin-top: -34px; }
+    }
+
+    @media (max-width: 640px) {
+      .topbar { top: 10px; width: calc(100% - 20px); border-radius: 24px; align-items: flex-start; }
+      .brand span:last-child { display: none; }
+      .language-wrap { flex: 1; justify-content: flex-end; }
+      .language-select { max-width: 135px; }
+      .hero { padding-top: 130px; min-height: 92vh; }
+      .section { padding: 64px 0; }
+      .event-panel, .ack-panel { padding: 28px; border-radius: 26px; }
+      .partners-grid, .slow-grid { grid-template-columns: 1fr; }
+      .btn { width: 100%; white-space: normal; }
+      .btn-row { width: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .btn { transition: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="page">
+    <header class="topbar" aria-label="Site navigation">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <span class="brand-mark">DF</span>
+        <span>Dementia Friendly Hmong Community</span>
+      </a>
+
+      <nav class="nav" aria-label="Page sections">
+        <a href="#event">Event</a>
+        <a href="#film">Film</a>
+        <a href="#learn">Learn</a>
+        <a href="#resources">Resources</a>
+        <a href="#partners">Partners</a>
+        <a href="#acknowledgements">Acknowledgements</a>
+      </nav>
+
+      <div class="language-wrap">
+        <label for="languageSelect">🌐</label>
+        <select class="language-select" id="languageSelect" aria-label="Select direct translation language">
+          <option value="en">English</option>
+          <option value="hmn">Hmoob</option>
+          <option value="zh">中文</option>
+          <option value="es">Español</option>
+        </select>
+        <select class="language-select google-language-select" id="googleTranslateSelect" aria-label="Select another language with Google Translate">
+          <option value="">Other languages</option>
+          <option value="af">Afrikaans</option>
+          <option value="sq">Albanian</option>
+          <option value="am">Amharic</option>
+          <option value="ar">Arabic</option>
+          <option value="hy">Armenian</option>
+          <option value="az">Azerbaijani</option>
+          <option value="bn">Bengali</option>
+          <option value="bs">Bosnian</option>
+          <option value="bg">Bulgarian</option>
+          <option value="my">Burmese</option>
+          <option value="km">Cambodian / Khmer</option>
+          <option value="ceb">Cebuano</option>
+          <option value="hr">Croatian</option>
+          <option value="cs">Czech</option>
+          <option value="da">Danish</option>
+          <option value="nl">Dutch</option>
+          <option value="et">Estonian</option>
+          <option value="tl">Filipino / Tagalog</option>
+          <option value="fi">Finnish</option>
+          <option value="fr">French</option>
+          <option value="de">German</option>
+          <option value="el">Greek</option>
+          <option value="gu">Gujarati</option>
+          <option value="ht">Haitian Creole</option>
+          <option value="ha">Hausa</option>
+          <option value="hi">Hindi</option>
+          <option value="id">Indonesian</option>
+          <option value="it">Italian</option>
+          <option value="ja">Japanese</option>
+          <option value="kn">Kannada</option>
+          <option value="kk">Kazakh</option>
+          <option value="ko">Korean</option>
+          <option value="lo">Lao</option>
+          <option value="lv">Latvian</option>
+          <option value="lt">Lithuanian</option>
+          <option value="ms">Malay</option>
+          <option value="ml">Malayalam</option>
+          <option value="mr">Marathi</option>
+          <option value="ne">Nepali</option>
+          <option value="fa">Persian / Farsi</option>
+          <option value="pl">Polish</option>
+          <option value="pt">Portuguese</option>
+          <option value="pa">Punjabi</option>
+          <option value="ro">Romanian</option>
+          <option value="ru">Russian</option>
+          <option value="sr">Serbian</option>
+          <option value="so">Somali</option>
+          <option value="sw">Swahili</option>
+          <option value="sv">Swedish</option>
+          <option value="ta">Tamil</option>
+          <option value="te">Telugu</option>
+          <option value="th">Thai</option>
+          <option value="tr">Turkish</option>
+          <option value="uk">Ukrainian</option>
+          <option value="ur">Urdu</option>
+          <option value="vi">Vietnamese</option>
+          <option value="cy">Welsh</option>
+          <option value="yi">Yiddish</option>
+          <option value="yo">Yoruba</option>
+          <option value="auto">More languages</option>
+        </select>
+      </div>
+    </header>
+
+    <div class="mobile-note">
+      Use the first dropdown for English, Hmong, Chinese, or Spanish. Use the second dropdown for all other languages with Google Translate.
+    </div>
+
+    <section class="hero" id="top" aria-label="Hero video section">
+      <div class="hero-fallback" aria-hidden="true"></div>
+      <div class="hero-video" aria-hidden="true">
+        <iframe
+          src="https://www.youtube.com/embed/KaY9ybbNNC4?autoplay=1&mute=1&loop=1&playlist=KaY9ybbNNC4&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+          title="Background video: My Mother Kuv Nam, A Hmong Story on Dementia"
+          allow="autoplay; encrypted-media; picture-in-picture; web-share">
+        </iframe>
+      </div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <span class="eyebrow">Dementia Awareness • Hmong Community • Healthy Aging</span>
+        <h1>Building a Dementia Friendly Hmong Community and Beyond</h1>
+        <p class="lead">
+          Empowering Hmong families, caregivers, healthcare professionals, and the broader community through culturally responsive dementia education, early conversation, caregiver support, and trusted local resources.
+        </p>
+
+        <div class="hero-event-card" aria-label="Featured event details">
+          <div class="event-chip">
+            <span>Date</span>
+            <strong>October 29</strong>
+          </div>
+          <div class="event-chip">
+            <span>Location</span>
+            <strong>Milwaukee, Wisconsin</strong>
+          </div>
+          <div class="event-chip">
+            <span>Purpose</span>
+            <strong>Learn • Connect • Support</strong>
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <a href="#event" class="btn btn-primary">View Event Details</a>
+          <a href="https://youtu.be/KaY9ybbNNC4?si=qUrcuY9fwOkSYoct" target="_blank" rel="noopener" class="btn btn-light">Watch Full Film</a>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#main">Scroll to learn more ↓</a>
+    </section>
+
+    <main id="main">
+      <section class="event-feature" id="event">
+        <div class="container">
+          <div class="event-panel">
+            <div class="event-layout">
+              <div>
+                <span class="eyebrow">Featured Community Event</span>
+                <h2>Community Education & Awareness Event</h2>
+                <p>
+                  Join community partners for a meaningful Milwaukee event focused on dementia awareness, early warning signs, caregiver support, and local resources for Hmong families and the broader community.
+                </p>
+
+                <div class="event-meta">
+                  <div class="meta-row">📅 <span><strong>Wednesday, October 29</strong></span></div>
+                  <div class="meta-row">📍 <span><strong>Milwaukee, Wisconsin</strong></span></div>
+                  <div class="meta-row">🎟️ <span><strong>Registration details coming soon</strong></span></div>
+                </div>
+
+                <div class="btn-row" style="justify-content:flex-start">
+                  <a href="#resources" class="btn btn-dark">Find Local Resources</a>
+                  <a href="#film" class="btn btn-outline">Watch the Film</a>
+                </div>
+              </div>
+
+              <div class="event-highlights">
+                <h3>Event Highlights</h3>
+                <p>
+                  Designed for families, caregivers, seniors, healthcare workers, service providers, and community leaders.
+                </p>
+                <ul class="pill-list" aria-label="Event topics">
+                  <li>🧠 Dementia Education</li>
+                  <li>❤️ Caregiver Support</li>
+                  <li>🎬 Hmong Film</li>
+                  <li>🤝 Local Resources</li>
+                  <li>🌏 Hmong Language Resources</li>
+                  <li>❓ Community Q&A</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="partners">
+        <div class="container">
+          <div class="section-title">
+            <span class="eyebrow">Community Partners</span>
+            <h2>Working Together for a More Dementia-Friendly Community</h2>
+            <p>
+              This initiative is made possible through collaboration among public service, aging, health, community, and nonprofit partners.
+            </p>
+          </div>
+
+          <div class="partners-grid">
+            <div class="partner-card">
+              <div>
+                <div class="partner-initial">MC</div>
+                <h3>Milwaukee County Department of Health & Human Services</h3>
+              </div>
+              <p>Aging & Disabilities Services</p>
+            </div>
+
+            <div class="partner-card">
+              <div>
+                <div class="partner-initial">AD</div>
+                <h3>Aging & Disability Resource Center of Milwaukee County</h3>
+              </div>
+              <p>Local resource connection for older adults, people with disabilities, caregivers, and families.</p>
+            </div>
+
+            <div class="partner-card">
+              <div>
+                <div class="partner-initial">MCC</div>
+                <h3>Milwaukee Community Crossroads</h3>
+              </div>
+              <p>Community-based healthy aging, wellness, and family support partner.</p>
+            </div>
+
+            <div class="partner-card">
+              <div>
+                <div class="partner-initial">ALZ</div>
+                <h3>Alzheimer's Association Wisconsin Chapter</h3>
+              </div>
+              <p>Dementia education, caregiver support, care consultation, and 24/7 helpline resources.</p>
+            </div>
+
+            <div class="partner-card">
+              <div>
+                <div class="partner-initial">W</div>
+                <h3>Wisconsin Chinese Chamber of Commerce</h3>
+              </div>
+              <p>Community convener supporting outreach, education, and culturally responsive programming.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section film-section" id="film">
+        <div class="container">
+          <div class="section-title">
+            <span class="eyebrow">Watch & Share</span>
+            <h2>My Mother “Kuv Nam”: A Hmong Story on Dementia</h2>
+            <p>
+              This Hmong dementia film helps families begin natural conversations about memory loss, aging, caregiving, and dementia.
+            </p>
+          </div>
+
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/KaY9ybbNNC4"
+              title="My Mother Kuv Nam: A Hmong Story on Dementia"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <div class="btn-row">
+            <a href="https://youtu.be/KaY9ybbNNC4?si=qUrcuY9fwOkSYoct" target="_blank" rel="noopener" class="btn btn-primary">Open on YouTube</a>
+            <a href="#downloads" class="btn btn-light">Download Education Materials</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="learn">
+        <div class="container">
+          <div class="section-title">
+            <span class="eyebrow">Understand Dementia</span>
+            <h2>Awareness Helps Families Take Action Earlier</h2>
+            <p>
+              Dementia describes changes in memory, thinking, communication, and reasoning that interfere with daily life. It is caused by disease in the brain and is not a normal part of aging.
+            </p>
+          </div>
+
+          <div class="grid grid-3">
+            <div class="card learn-card">
+              <div class="icon">🧠</div>
+              <h3>Common Signs</h3>
+              <ul>
+                <li>Memory loss affecting daily life</li>
+                <li>Difficulty completing familiar tasks</li>
+                <li>Confusion about time or place</li>
+                <li>New problems with words</li>
+                <li>Mood or personality changes</li>
+              </ul>
+            </div>
+
+            <div class="card learn-card">
+              <div class="icon">⚕️</div>
+              <h3>Other Causes of Memory Loss</h3>
+              <ul>
+                <li>Depression</li>
+                <li>Medication side effects</li>
+                <li>Infections</li>
+                <li>Hearing or vision problems</li>
+                <li>Sleep problems or poor nutrition</li>
+              </ul>
+            </div>
+
+            <div class="card learn-card">
+              <div class="icon">❤️</div>
+              <h3>Why Early Diagnosis Matters</h3>
+              <ul>
+                <li>Get an accurate diagnosis</li>
+                <li>Access support sooner</li>
+                <li>Understand the disease</li>
+                <li>Plan for care and lifestyle changes</li>
+                <li>Improve quality of life</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section soft" id="communication">
+        <div class="container slow-wrapper">
+          <div class="section-title">
+            <span class="eyebrow">Communication Tip</span>
+            <h2>Remember SLOWER</h2>
+            <p>
+              Small changes in how we communicate can make conversations safer, calmer, and more respectful for someone living with dementia.
+            </p>
+          </div>
+
+          <div class="slow-grid" aria-label="SLOWER communication acronym">
+            <div class="slow-card"><strong>S</strong><span>Smile</span></div>
+            <div class="slow-card"><strong>L</strong><span>Listen</span></div>
+            <div class="slow-card"><strong>O</strong><span>One thing at a time</span></div>
+            <div class="slow-card"><strong>W</strong><span>Words clear</span></div>
+            <div class="slow-card"><strong>E</strong><span>Eye contact</span></div>
+            <div class="slow-card"><strong>R</strong><span>Remain calm</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="resources">
+        <div class="container">
+          <div class="section-title">
+            <span class="eyebrow">Local Resources</span>
+            <h2>Connect with Trusted Milwaukee Resources</h2>
+            <p>
+              Families and caregivers do not have to navigate dementia alone. These local and statewide resources can help.
+            </p>
+          </div>
+
+          <div class="grid grid-3">
+            <div class="card resource-card">
+              <div class="icon">🏛️</div>
+              <h3>ADRC of Milwaukee County</h3>
+              <p>The local resource for older adults, individuals with disabilities, caregivers, and families.</p>
+              <div class="contact-line">
+                <span><strong>Phone:</strong> (414) 289-6874</span>
+              </div>
+            </div>
+
+            <div class="card resource-card">
+              <div class="icon">🤝</div>
+              <h3>Milwaukee Community Crossroads</h3>
+              <p>Community-based support for healthy aging, wellness, and family connection.</p>
+              <div class="contact-line">
+                <span><strong>Address:</strong> 807 S. 14th Street, Milwaukee, WI 53204</span>
+                <span><strong>Direct:</strong> 414-902-5384</span>
+                <span><strong>Cell:</strong> 414-688-5435</span>
+                <span><strong>Website:</strong> <a href="https://www.mccwi.org" target="_blank" rel="noopener">www.mccwi.org</a></span>
+              </div>
+            </div>
+
+            <div class="card resource-card">
+              <div class="icon">☎️</div>
+              <h3>Alzheimer's Association Wisconsin Chapter</h3>
+              <p>Education, caregiver support, care consultation, and a 24/7 helpline.</p>
+              <div class="contact-line">
+                <span><strong>24/7 Helpline:</strong> 1-800-272-3900</span>
+                <span><strong>Website:</strong> <a href="https://www.alz.org" target="_blank" rel="noopener">www.alz.org</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section blue" id="downloads">
+        <div class="container">
+          <div class="section-title">
+            <span class="eyebrow">Download Center</span>
+            <h2>Bilingual Hmong Dementia Education Materials</h2>
+            <p>
+              Add your uploaded PDF links to these buttons after publishing the files on your website.
+            </p>
+          </div>
+
+          <div class="grid grid-3">
+            <div class="card download-card">
+              <div>
+                <div class="doc-icon">📄</div>
+                <h3>Building a Dementia Friendly Hmong Community</h3>
+                <p>Awareness flyer with film information and community education messaging.</p>
+              </div>
+              <a href="#" class="btn btn-dark">Download PDF</a>
+            </div>
+
+            <div class="card download-card">
+              <div>
+                <div class="doc-icon">📄</div>
+                <h3>Dementia Friendly Communication Guide</h3>
+                <p>Practical communication tips for supporting someone living with dementia.</p>
+              </div>
+              <a href="#" class="btn btn-dark">Download PDF</a>
+            </div>
+
+            <div class="card download-card">
+              <div>
+                <div class="doc-icon">📄</div>
+                <h3>Memory Changes & Early Warning Signs</h3>
+                <p>Education on symptoms, possible causes, and the benefits of seeing a doctor.</p>
+              </div>
+              <a href="#" class="btn btn-dark">Download PDF</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section acknowledgement" id="acknowledgements">
+        <div class="container">
+          <div class="ack-panel">
+            <span class="eyebrow">Acknowledgements</span>
+            <h2>Educational Resources & Special Thanks</h2>
+            <p>
+              We gratefully acknowledge the <strong>Aging & Disability Resource Center (ADRC) of Dane County</strong> and <strong>Nyob Zoo TV</strong> for developing the Hmong dementia educational materials and producing the award-winning film <em>“My Mother (Kuv Nam): A Hmong Story on Dementia.”</em>
+            </p>
+            <p>
+              Their leadership in creating culturally and linguistically appropriate dementia education has helped communities across Wisconsin increase awareness, reduce stigma, and encourage early conversations about dementia.
+            </p>
+            <hr class="ack-rule" />
+            <p>
+              This initiative is presented through the collaboration of the <strong>Milwaukee County Department of Health & Human Services – Aging & Disabilities Services</strong>, the <strong>Aging & Disability Resource Center (ADRC) of Milwaukee County</strong>, <strong>Milwaukee Community Crossroads (MCC)</strong>, the <strong>Alzheimer's Association Wisconsin Chapter</strong>, and the <strong>Wisconsin Chinese Chamber of Commerce (WCCC)</strong> to expand dementia awareness and support Hmong families throughout Milwaukee County and beyond.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div class="container">
+          <h2>Together, We Can Build a Dementia Friendly Community</h2>
+          <p>
+            Join us on October 29 in Milwaukee to learn, connect, support caregivers, and help create a healthier future for Hmong families and communities across Wisconsin.
+          </p>
+          <div class="btn-row">
+            <a href="#event" class="btn btn-primary">Join the October 29 Event</a>
+            <a href="#resources" class="btn btn-light">Get Support</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="translation-box" id="translationBox" aria-live="polite">
+    <h3>Other Languages / Google Translate</h3>
+    <p id="translationMessage">
+      English, Hmong, Chinese, and Spanish are built directly into this page. For all other languages, use the Google Translate dropdown in the top menu.
+    </p>
+
+    <textarea readonly>Translation is provided for convenience. For medical questions, please consult a qualified healthcare professional or contact a local resource partner. Google Translate works best after this page is published on a public website.</textarea>
+
+    <div class="translation-actions">
+      <button class="tiny-btn secondary" id="closeTranslate" type="button">Close</button>
+      <a class="tiny-btn" id="openGoogleTranslate" href="#" target="_blank" rel="noopener" style="text-decoration:none">Open Google Translate</a>
+    </div>
+  </div>
+
+  <script>
+    const languageSelect = document.getElementById('languageSelect');
+    const googleTranslateSelect = document.getElementById('googleTranslateSelect');
+    const translationBox = document.getElementById('translationBox');
+    const closeTranslate = document.getElementById('closeTranslate');
+    const translationTitle = translationBox.querySelector('h3');
+    const translationMessage = document.getElementById('translationMessage');
+    const translationNote = translationBox.querySelector('textarea');
+    const openGoogleTranslate = document.getElementById('openGoogleTranslate');
+
+    const googleLangNames = {
+      vi: 'Vietnamese',
+      ko: 'Korean',
+      fr: 'French',
+      ar: 'Arabic',
+      ru: 'Russian',
+      so: 'Somali',
+      lo: 'Lao',
+      th: 'Thai',
+      my: 'Burmese',
+      auto: 'More Languages'
+    };
+
+    function buildGoogleTranslateUrl(lang) {
+      const target = lang === 'auto' ? 'en' : lang;
+      const pageUrl = window.location.href.split('#')[0];
+      return 'https://translate.google.com/translate?sl=auto&tl=' + encodeURIComponent(target) + '&u=' + encodeURIComponent(pageUrl);
+    }
+
+    function openGoogleTranslateFor(lang) {
+      window.open(buildGoogleTranslateUrl(lang), '_blank', 'noopener');
+    }
+
+    const directTranslations = {"hmn": {"Dementia Friendly Hmong Community": "Zej Zog Hmoob Paub thiab Pab Txog Dementia", "Event": "Rooj Sib Tham", "Film": "Yeeb yaj kiab", "Learn": "Kawm Paub", "Resources": "Kev Pab", "Partners": "Cov Koom Haum Koom Tes", "Acknowledgements": "Kev Ua Tsaug", "Use the first dropdown for English, Hmong, Chinese, or Spanish. Use the second dropdown for all other languages with Google Translate.": "Xaiv hom lus: Hmoob, Suav, lossis Mev. Rau lwm hom lus, siv Google/Browser Translate.", "Dementia Awareness • Hmong Community • Healthy Aging": "Kev paub txog dementia • Zej zog Hmoob • Kev laus noj qab nyob zoo", "Building a Dementia Friendly Hmong Community and Beyond": "Tsim Ib Zej Zog Hmoob Paub thiab Pab Txog Dementia thiab Dav Dua", "Empowering Hmong families, caregivers, healthcare professionals, and the broader community through culturally responsive dementia education, early conversation, caregiver support, and trusted local resources.": "Txhawb tsev neeg Hmoob, cov neeg saib xyuas, cov kws kho mob, thiab zej zog kom muaj kev kawm txog dementia raws kab lis kev cai, pib sib tham ntxov, txhawb cov saib xyuas, thiab txuas rau kev pab hauv zej zog uas ntseeg tau.", "Date": "Hnub", "October 29": "Lub Kaum Hli 29", "Location": "Qhov chaw", "Milwaukee, Wisconsin": "Milwaukee, Wisconsin", "Purpose": "Lub hom phiaj", "Learn • Connect • Support": "Kawm • Sib txuas • Txhawb nqa", "View Event Details": "Saib cov ntaub ntawv rooj sib tham", "Watch Full Film": "Saib zaj yeeb yaj kiab tag nrho", "Scroll to learn more ↓": "Txav nqes mus kawm ntxiv ↓", "Featured Community Event": "Rooj Sib Tham Tshwj Xeeb Hauv Zej Zog", "Community Education & Awareness Event": "Rooj Sib Tham Kawm thiab Qhia Txog Dementia", "Join community partners for a meaningful Milwaukee event focused on dementia awareness, early warning signs, caregiver support, and local resources for Hmong families and the broader community.": "Koom nrog cov koom haum hauv zej zog rau ib rooj sib tham tseem ceeb hauv Milwaukee uas yuav hais txog kev paub txog dementia, cov cim ceeb toom ntxov, kev txhawb rau cov saib xyuas, thiab kev pab hauv zej zog rau tsev neeg Hmoob thiab pej xeem sawv daws.", "Wednesday, October 29": "Hnub Wednesday, Lub Kaum Hli 29", "Registration details coming soon": "Cov ntaub ntawv sau npe yuav los sai sai", "Find Local Resources": "Nrhiav kev pab hauv zos", "Watch the Film": "Saib zaj yeeb yaj kiab", "Event Highlights": "Yam tseem ceeb hauv rooj sib tham", "Designed for families, caregivers, seniors, healthcare workers, service providers, and community leaders.": "Tsim rau tsev neeg, cov saib xyuas, cov laus, cov neeg ua haujlwm kho mob, cov muab kev pab, thiab cov thawj coj hauv zej zog.", "🧠 Dementia Education": "🧠 Kev kawm txog dementia", "❤️ Caregiver Support": "❤️ Kev txhawb cov saib xyuas", "🎬 Hmong Film": "🎬 Yeeb yaj kiab Hmoob", "🤝 Local Resources": "🤝 Kev pab hauv zos", "🌏 Hmong Language Resources": "🌏 Ntaub ntawv pab ua lus Hmoob", "❓ Community Q&A": "❓ Nug thiab teb hauv zej zog", "Community Partners": "Cov Koom Haum Koom Tes", "Working Together for a More Dementia-Friendly Community": "Koom Tes Tsim Ib Zej Zog Paub thiab Pab Txog Dementia", "This initiative is made possible through collaboration among public service, aging, health, community, and nonprofit partners.": "Qhov haujlwm no ua tau vim muaj kev koom tes ntawm tsoom fwv kev pab, kev laus, kev noj qab haus huv, zej zog, thiab cov koom haum tsis nrhiav nyiaj.", "Milwaukee County Department of Health & Human Services": "Milwaukee County Department of Health & Human Services", "Aging & Disabilities Services": "Kev Pab Rau Kev Laus thiab Cov Neeg Xiam Oob Qhab", "Aging & Disability Resource Center of Milwaukee County": "Aging & Disability Resource Center (ADRC) ntawm Milwaukee County", "Local resource connection for older adults, people with disabilities, caregivers, and families.": "Chaw txuas kev pab hauv zos rau cov laus, cov neeg xiam oob qhab, cov saib xyuas, thiab tsev neeg.", "Milwaukee Community Crossroads": "Milwaukee Community Crossroads", "Community-based healthy aging, wellness, and family support partner.": "Koom haum hauv zej zog pab kev laus noj qab nyob zoo, kev noj qab haus huv, thiab kev txhawb tsev neeg.", "Alzheimer's Association Wisconsin Chapter": "Alzheimer's Association Wisconsin Chapter", "Dementia education, caregiver support, care consultation, and 24/7 helpline resources.": "Kev kawm txog dementia, kev txhawb cov saib xyuas, kev sab laj txog kev saib xyuas, thiab xov tooj pab 24/7.", "Wisconsin Chinese Chamber of Commerce": "Wisconsin Chinese Chamber of Commerce", "Community convener supporting outreach, education, and culturally responsive programming.": "Tus koom tes hu thiab sib sau zej zog los txhawb kev tshaj tawm, kev kawm, thiab kev pab raws kab lis kev cai.", "Watch & Share": "Saib thiab faib qhia", "My Mother “Kuv Nam”: A Hmong Story on Dementia": "My Mother “Kuv Nam”: Ib Zaj Dab Neeg Hmoob Txog Dementia", "This Hmong dementia film helps families begin natural conversations about memory loss, aging, caregiving, and dementia.": "Zaj yeeb yaj kiab Hmoob no pab tsev neeg pib sib tham yooj yim txog kev nco hloov, kev laus, kev saib xyuas, thiab dementia.", "Open on YouTube": "Qhib hauv YouTube", "Download Education Materials": "Rub cov ntaub ntawv kawm", "Understand Dementia": "Nkag siab txog dementia", "Awareness Helps Families Take Action Earlier": "Kev paub pab tsev neeg pib nqis tes ntxov dua", "Dementia describes changes in memory, thinking, communication, and reasoning that interfere with daily life. It is caused by disease in the brain and is not a normal part of aging.": "Dementia yog ib lo lus piav txog kev hloov ntawm kev nco, kev xav, kev sib txuas lus, thiab kev txiav txim siab uas cuam tshuam lub neej txhua hnub. Nws tshwm sim los ntawm kab mob hauv lub hlwb thiab tsis yog ib feem ntawm kev laus ib txwm.", "Common Signs": "Cov cim tshwm sim", "Memory loss affecting daily life": "Kev nco poob cuam tshuam lub neej txhua hnub", "Difficulty completing familiar tasks": "Ua cov haujlwm uas ib txwm paub nyuaj", "Confusion about time or place": "Tsis meej txog sijhawm lossis chaw", "New problems with words": "Muaj teeb meem tshiab nrhiav lus", "Mood or personality changes": "Cwj pwm lossis kev xav hloov", "Other Causes of Memory Loss": "Lwm yam uas ua rau nco tsis zoo", "Depression": "Kev nyuaj siab", "Medication side effects": "Tshuaj muaj kev phiv", "Infections": "Kab mob kis", "Hearing or vision problems": "Tsis hnov lossis tsis pom kev zoo", "Sleep problems or poor nutrition": "Pw tsis tsaug zog lossis noj haus tsis txaus", "Why Early Diagnosis Matters": "Vim li cas kev kuaj ntxov thiaj tseem ceeb", "Get an accurate diagnosis": "Tau kev kuaj kom raug", "Access support sooner": "Tau kev pab sai dua", "Understand the disease": "Nkag siab txog tus kab mob", "Plan for care and lifestyle changes": "Npaj kev saib xyuas thiab hloov kev ua neej", "Improve quality of life": "Txhim kho lub neej kom zoo dua", "Communication Tip": "Tswv yim sib txuas lus", "Remember SLOWER": "Nco ntsoov SLOWER", "Small changes in how we communicate can make conversations safer, calmer, and more respectful for someone living with dementia.": "Kev hloov me me hauv kev sib txuas lus pab kom kev sib tham nyab xeeb dua, nyob twj ywm dua, thiab hwm tus neeg muaj dementia.", "Smile": "Luag ntxhi", "Listen": "Mloog zoo", "One thing at a time": "Ib yam xwb", "Words clear": "Hais lus meej", "Eye contact": "Saib qhov muag", "Remain calm": "Nyob twj ywm", "Local Resources": "Kev Pab Hauv Zos", "Connect with Trusted Milwaukee Resources": "Txuas rau cov kev pab ntseeg tau hauv Milwaukee", "Families and caregivers do not have to navigate dementia alone. These local and statewide resources can help.": "Tsev neeg thiab cov saib xyuas tsis tas yuav hla txoj kev dementia ib leeg. Cov kev pab hauv zos thiab thoob xeev no pab tau.", "ADRC of Milwaukee County": "ADRC ntawm Milwaukee County", "The local resource for older adults, individuals with disabilities, caregivers, and families.": "Chaw pab hauv zos rau cov laus, cov neeg xiam oob qhab, cov saib xyuas, thiab tsev neeg.", "Phone:": "Xov tooj:", "Community-based support for healthy aging, wellness, and family connection.": "Kev txhawb hauv zej zog rau kev laus noj qab nyob zoo, kev noj qab haus huv, thiab tsev neeg sib txuas.", "Address:": "Chaw nyob:", "Direct:": "Xov tooj ncaj qha:", "Cell:": "Xov tooj ntawm tes:", "Website:": "Vev xaib:", "Education, caregiver support, care consultation, and a 24/7 helpline.": "Kev kawm, kev txhawb cov saib xyuas, kev sab laj, thiab xov tooj pab 24/7.", "24/7 Helpline:": "Xov tooj pab 24/7:", "Download Center": "Chaw Rub Ntaub Ntawv", "Bilingual Hmong Dementia Education Materials": "Ntaub ntawv kawm txog dementia ua lus Askiv thiab Hmoob", "Add your uploaded PDF links to these buttons after publishing the files on your website.": "Tom qab koj tso cov PDF rau hauv koj lub vev xaib, muab cov link tso rau cov khawm no.", "Building a Dementia Friendly Hmong Community": "Tsim Ib Zej Zog Hmoob Paub thiab Pab Txog Dementia", "Awareness flyer with film information and community education messaging.": "Daim ntawv qhia kev paub nrog ntaub ntawv txog zaj yeeb yaj kiab thiab lus kawm rau zej zog.", "Download PDF": "Rub PDF", "Dementia Friendly Communication Guide": "Phau Qhia Kev Sib Txuas Lus Rau Dementia", "Practical communication tips for supporting someone living with dementia.": "Tswv yim yooj yim pab sib txuas lus nrog tus neeg muaj dementia.", "Memory Changes & Early Warning Signs": "Kev Nco Hloov thiab Cov Cim Ceeb Toom Ntxov", "Education on symptoms, possible causes, and the benefits of seeing a doctor.": "Kev kawm txog cov tsos mob, tej yam ua tau, thiab qhov zoo ntawm kev mus ntsib kws kho mob.", "Educational Resources & Special Thanks": "Ntaub Ntawv Kawm thiab Kev Ua Tsaug Tshwj Xeeb", "We gratefully acknowledge the": "Peb ua tsaug ntau rau", "Aging & Disability Resource Center (ADRC) of Dane County": "Aging & Disability Resource Center (ADRC) ntawm Dane County", "and": "thiab", "Nyob Zoo TV": "Nyob Zoo TV", "for developing the Hmong dementia educational materials and producing the award-winning film": "rau kev tsim cov ntaub ntawv kawm txog dementia rau Hmoob thiab tsim zaj yeeb yaj kiab uas tau txais khoom plig", "“My Mother (Kuv Nam): A Hmong Story on Dementia.”": "“My Mother (Kuv Nam): Ib Zaj Dab Neeg Hmoob Txog Dementia.”", "Their leadership in creating culturally and linguistically appropriate dementia education has helped communities across Wisconsin increase awareness, reduce stigma, and encourage early conversations about dementia.": "Lawv txoj kev coj hauv kev tsim kev kawm txog dementia raws kab lis kev cai thiab lus tau pab cov zej zog thoob Wisconsin kom muaj kev paub ntxiv, txo kev txaj muag, thiab txhawb kom pib sib tham ntxov txog dementia.", "This initiative is presented through the collaboration of the": "Qhov haujlwm no tau tsim los ntawm kev koom tes ntawm", "Milwaukee County Department of Health & Human Services – Aging & Disabilities Services": "Milwaukee County Department of Health & Human Services – Aging & Disabilities Services", "Aging & Disability Resource Center (ADRC) of Milwaukee County": "Aging & Disability Resource Center (ADRC) ntawm Milwaukee County", "Milwaukee Community Crossroads (MCC)": "Milwaukee Community Crossroads (MCC)", "Wisconsin Chinese Chamber of Commerce (WCCC)": "Wisconsin Chinese Chamber of Commerce (WCCC)", "to expand dementia awareness and support Hmong families throughout Milwaukee County and beyond.": "kom nthuav kev paub txog dementia thiab txhawb tsev neeg Hmoob thoob Milwaukee County thiab dav dua.", "Together, We Can Build a Dementia Friendly Community": "Ua ke, peb tsim tau ib zej zog paub thiab pab txog dementia", "Join us on October 29 in Milwaukee to learn, connect, support caregivers, and help create a healthier future for Hmong families and communities across Wisconsin.": "Koom nrog peb rau Lub Kaum Hli 29 hauv Milwaukee kom kawm, sib txuas, txhawb cov saib xyuas, thiab pab tsim yav tom ntej noj qab nyob zoo rau tsev neeg Hmoob thiab cov zej zog thoob Wisconsin.", "Join the October 29 Event": "Koom rooj sib tham Lub Kaum Hli 29", "Get Support": "Tau kev pab", "Other Languages / Auto Translation": "Lwm hom lus / Google Translate", "For additional languages, use your browser's built-in translation feature. In Chrome or Edge, right-click the page and choose": "Rau lwm hom lus, siv Google lossis browser txoj kev txhais lus. Hauv Chrome lossis Edge, nias sab xis ntawm nplooj ntawv thiab xaiv", "Translate": "Translate", " , or use the translation icon in the address bar.": "lossis siv lub cim txhais lus hauv address bar.", "Translation is provided for convenience. For medical questions, please consult a qualified healthcare professional or contact a local resource partner. Google Translate works best after this page is published on a public website.": "Kev txhais lus yog pab kom yooj yim xwb. Yog muaj lus nug txog kev kho mob, thov tham nrog kws kho mob lossis hu rau ib qho kev pab hauv zos. Google Translate yuav ua haujlwm zoo tshaj thaum nplooj ntawv no tso rau lub website pej xeem.", "Close": "Kaw"}, "zh": {"Dementia Friendly Hmong Community": "失智症友善苗族社区", "Event": "活动", "Film": "影片", "Learn": "了解", "Resources": "资源", "Partners": "合作伙伴", "Acknowledgements": "致谢", "Use the first dropdown for English, Hmong, Chinese, or Spanish. Use the second dropdown for all other languages with Google Translate.": "请选择苗语、中文或西班牙语。其他语言请使用 Google/浏览器自动翻译。", "Dementia Awareness • Hmong Community • Healthy Aging": "失智症认知 • 苗族社区 • 健康老龄化", "Building a Dementia Friendly Hmong Community and Beyond": "建设失智症友善的苗族社区，并延伸到更广泛社区", "Empowering Hmong families, caregivers, healthcare professionals, and the broader community through culturally responsive dementia education, early conversation, caregiver support, and trusted local resources.": "通过符合文化需求的失智症教育、早期沟通、照护者支持和可信赖的本地资源，支持苗族家庭、照护者、医护人员以及更广泛的社区。", "Date": "日期", "October 29": "10月29日", "Location": "地点", "Milwaukee, Wisconsin": "威斯康星州密尔沃基", "Purpose": "目的", "Learn • Connect • Support": "学习 • 连接 • 支持", "View Event Details": "查看活动详情", "Watch Full Film": "观看完整影片", "Scroll to learn more ↓": "向下滚动了解更多 ↓", "Featured Community Event": "重点社区活动", "Community Education & Awareness Event": "社区教育与认知活动", "Join community partners for a meaningful Milwaukee event focused on dementia awareness, early warning signs, caregiver support, and local resources for Hmong families and the broader community.": "欢迎参加在密尔沃基举办的社区活动，重点关注失智症认知、早期警讯、照护者支持，以及面向苗族家庭和更广泛社区的本地资源。", "Wednesday, October 29": "10月29日，星期三", "Registration details coming soon": "报名信息即将公布", "Find Local Resources": "查找本地资源", "Watch the Film": "观看影片", "Event Highlights": "活动亮点", "Designed for families, caregivers, seniors, healthcare workers, service providers, and community leaders.": "适合家庭、照护者、长者、医护人员、服务机构和社区领袖参加。", "🧠 Dementia Education": "🧠 失智症教育", "❤️ Caregiver Support": "❤️ 照护者支持", "🎬 Hmong Film": "🎬 苗族影片", "🤝 Local Resources": "🤝 本地资源", "🌏 Hmong Language Resources": "🌏 苗语资源", "❓ Community Q&A": "❓ 社区问答", "Community Partners": "社区合作伙伴", "Working Together for a More Dementia-Friendly Community": "共同建设更失智症友善的社区", "This initiative is made possible through collaboration among public service, aging, health, community, and nonprofit partners.": "本倡议由公共服务、老龄服务、健康、社区和非营利合作伙伴共同推动。", "Milwaukee County Department of Health & Human Services": "密尔沃基县卫生与公共服务部", "Aging & Disabilities Services": "老龄与残障服务", "Aging & Disability Resource Center of Milwaukee County": "密尔沃基县老龄与残障资源中心（ADRC）", "Local resource connection for older adults, people with disabilities, caregivers, and families.": "为长者、残障人士、照护者和家庭连接本地资源。", "Milwaukee Community Crossroads": "Milwaukee Community Crossroads", "Community-based healthy aging, wellness, and family support partner.": "提供健康老龄化、身心健康和家庭支持的社区合作伙伴。", "Alzheimer's Association Wisconsin Chapter": "阿尔茨海默病协会威斯康星分会", "Dementia education, caregiver support, care consultation, and 24/7 helpline resources.": "提供失智症教育、照护者支持、照护咨询和24/7求助热线。", "Wisconsin Chinese Chamber of Commerce": "威斯康星中华商会", "Community convener supporting outreach, education, and culturally responsive programming.": "社区召集者，支持外展、教育和符合文化需求的项目。", "Watch & Share": "观看并分享", "My Mother “Kuv Nam”: A Hmong Story on Dementia": "《我的母亲 Kuv Nam》：一个关于失智症的苗族故事", "This Hmong dementia film helps families begin natural conversations about memory loss, aging, caregiving, and dementia.": "这部苗族失智症影片帮助家庭自然地开始谈论记忆变化、老龄化、照护和失智症。", "Open on YouTube": "在 YouTube 打开", "Download Education Materials": "下载教育资料", "Understand Dementia": "了解失智症", "Awareness Helps Families Take Action Earlier": "提高认知帮助家庭更早采取行动", "Dementia describes changes in memory, thinking, communication, and reasoning that interfere with daily life. It is caused by disease in the brain and is not a normal part of aging.": "失智症指记忆、思考、沟通和判断能力的变化，并影响日常生活。它由大脑疾病引起，并不是正常老化的一部分。", "Common Signs": "常见迹象", "Memory loss affecting daily life": "影响日常生活的记忆力下降", "Difficulty completing familiar tasks": "完成熟悉任务变得困难", "Confusion about time or place": "对时间或地点感到困惑", "New problems with words": "出现新的语言表达困难", "Mood or personality changes": "情绪或性格变化", "Other Causes of Memory Loss": "记忆问题的其他可能原因", "Depression": "抑郁", "Medication side effects": "药物副作用", "Infections": "感染", "Hearing or vision problems": "听力或视力问题", "Sleep problems or poor nutrition": "睡眠问题或营养不足", "Why Early Diagnosis Matters": "为什么早期诊断很重要", "Get an accurate diagnosis": "获得准确诊断", "Access support sooner": "更早获得支持", "Understand the disease": "了解疾病", "Plan for care and lifestyle changes": "规划照护和生活方式调整", "Improve quality of life": "改善生活质量", "Communication Tip": "沟通建议", "Remember SLOWER": "记住 SLOWER", "Small changes in how we communicate can make conversations safer, calmer, and more respectful for someone living with dementia.": "沟通方式的小改变，可以让与失智症患者的对话更安全、更平和、更有尊严。", "Smile": "微笑", "Listen": "倾听", "One thing at a time": "一次只做一件事", "Words clear": "用词清楚", "Eye contact": "眼神交流", "Remain calm": "保持冷静", "Local Resources": "本地资源", "Connect with Trusted Milwaukee Resources": "连接密尔沃基可信赖资源", "Families and caregivers do not have to navigate dementia alone. These local and statewide resources can help.": "家庭和照护者不必独自面对失智症。这些本地和全州资源可以提供帮助。", "ADRC of Milwaukee County": "密尔沃基县 ADRC", "The local resource for older adults, individuals with disabilities, caregivers, and families.": "为长者、残障人士、照护者和家庭服务的本地资源。", "Phone:": "电话：", "Community-based support for healthy aging, wellness, and family connection.": "提供健康老龄化、身心健康和家庭连接的社区支持。", "Address:": "地址：", "Direct:": "直线：", "Cell:": "手机：", "Website:": "网站：", "Education, caregiver support, care consultation, and a 24/7 helpline.": "教育、照护者支持、照护咨询和24/7求助热线。", "24/7 Helpline:": "24/7求助热线：", "Download Center": "下载中心", "Bilingual Hmong Dementia Education Materials": "苗语双语失智症教育资料", "Add your uploaded PDF links to these buttons after publishing the files on your website.": "PDF上传到网站后，请把链接添加到这些按钮。", "Building a Dementia Friendly Hmong Community": "建设失智症友善的苗族社区", "Awareness flyer with film information and community education messaging.": "包含影片信息和社区教育内容的宣传单。", "Download PDF": "下载 PDF", "Dementia Friendly Communication Guide": "失智症友善沟通指南", "Practical communication tips for supporting someone living with dementia.": "支持失智症患者的实用沟通建议。", "Memory Changes & Early Warning Signs": "记忆变化与早期警讯", "Education on symptoms, possible causes, and the benefits of seeing a doctor.": "介绍症状、可能原因以及就医的好处。", "Educational Resources & Special Thanks": "教育资源与特别致谢", "We gratefully acknowledge the": "我们衷心感谢", "Aging & Disability Resource Center (ADRC) of Dane County": "Dane County 老龄与残障资源中心（ADRC）", "and": "以及", "Nyob Zoo TV": "Nyob Zoo TV", "for developing the Hmong dementia educational materials and producing the award-winning film": "开发苗族失智症教育资料并制作获奖影片", "“My Mother (Kuv Nam): A Hmong Story on Dementia.”": "《我的母亲（Kuv Nam）：一个关于失智症的苗族故事》。", "Their leadership in creating culturally and linguistically appropriate dementia education has helped communities across Wisconsin increase awareness, reduce stigma, and encourage early conversations about dementia.": "他们在创建符合文化和语言需求的失智症教育方面发挥了领导作用，帮助威斯康星各地社区提高认知、减少污名，并鼓励更早开展相关对话。", "This initiative is presented through the collaboration of the": "本倡议由以下伙伴合作呈现：", "Milwaukee County Department of Health & Human Services – Aging & Disabilities Services": "密尔沃基县卫生与公共服务部—老龄与残障服务", "Aging & Disability Resource Center (ADRC) of Milwaukee County": "密尔沃基县老龄与残障资源中心（ADRC）", "Milwaukee Community Crossroads (MCC)": "Milwaukee Community Crossroads（MCC）", "Wisconsin Chinese Chamber of Commerce (WCCC)": "威斯康星中华商会（WCCC）", "to expand dementia awareness and support Hmong families throughout Milwaukee County and beyond.": "旨在扩大失智症认知，并支持密尔沃基县及更广泛地区的苗族家庭。", "Together, We Can Build a Dementia Friendly Community": "携手建设失智症友善社区", "Join us on October 29 in Milwaukee to learn, connect, support caregivers, and help create a healthier future for Hmong families and communities across Wisconsin.": "欢迎10月29日在密尔沃基加入我们，一起学习、连接、支持照护者，并为威斯康星苗族家庭和社区创造更健康的未来。", "Join the October 29 Event": "参加10月29日活动", "Get Support": "获取支持", "Other Languages / Auto Translation": "其他语言 / Google 自动翻译", "For additional languages, use your browser's built-in translation feature. In Chrome or Edge, right-click the page and choose": "其他语言请使用浏览器内置翻译功能。在 Chrome 或 Edge 中，右键点击页面并选择", "Translate": "翻译", "Translation is provided for convenience. For medical questions, please consult a qualified healthcare professional or contact a local resource partner. Google Translate works best after this page is published on a public website.": "翻译仅为方便理解。如有医疗问题，请咨询合格医疗专业人员或联系本地资源伙伴。页面发布到公开网站后，Google Translate 效果最佳。", "Close": "关闭"}, "es": {"Dementia Friendly Hmong Community": "Comunidad Hmong Amigable con la Demencia", "Event": "Evento", "Film": "Película", "Learn": "Aprender", "Resources": "Recursos", "Partners": "Socios", "Acknowledgements": "Agradecimientos", "Use the first dropdown for English, Hmong, Chinese, or Spanish. Use the second dropdown for all other languages with Google Translate.": "Use el menú de idioma para Hmong, chino o español. Para otros idiomas, use Google o la traducción del navegador.", "Dementia Awareness • Hmong Community • Healthy Aging": "Conciencia sobre la demencia • Comunidad Hmong • Envejecimiento saludable", "Building a Dementia Friendly Hmong Community and Beyond": "Construyendo una Comunidad Hmong Amigable con la Demencia y Más Allá", "Empowering Hmong families, caregivers, healthcare professionals, and the broader community through culturally responsive dementia education, early conversation, caregiver support, and trusted local resources.": "Apoyamos a familias Hmong, cuidadores, profesionales de salud y a la comunidad en general con educación culturalmente apropiada sobre la demencia, conversaciones tempranas, apoyo para cuidadores y recursos locales confiables.", "Date": "Fecha", "October 29": "29 de octubre", "Location": "Lugar", "Milwaukee, Wisconsin": "Milwaukee, Wisconsin", "Purpose": "Propósito", "Learn • Connect • Support": "Aprender • Conectar • Apoyar", "View Event Details": "Ver detalles del evento", "Watch Full Film": "Ver película completa", "Scroll to learn more ↓": "Desplácese para saber más ↓", "Featured Community Event": "Evento comunitario destacado", "Community Education & Awareness Event": "Evento de educación y concientización comunitaria", "Join community partners for a meaningful Milwaukee event focused on dementia awareness, early warning signs, caregiver support, and local resources for Hmong families and the broader community.": "Acompañe a nuestros socios comunitarios en un evento significativo en Milwaukee enfocado en la concientización sobre la demencia, señales tempranas, apoyo para cuidadores y recursos locales para familias Hmong y la comunidad en general.", "Wednesday, October 29": "Miércoles, 29 de octubre", "Registration details coming soon": "Los detalles de inscripción se anunciarán pronto", "Find Local Resources": "Encontrar recursos locales", "Watch the Film": "Ver la película", "Event Highlights": "Aspectos destacados", "Designed for families, caregivers, seniors, healthcare workers, service providers, and community leaders.": "Diseñado para familias, cuidadores, adultos mayores, trabajadores de salud, proveedores de servicios y líderes comunitarios.", "🧠 Dementia Education": "🧠 Educación sobre la demencia", "❤️ Caregiver Support": "❤️ Apoyo para cuidadores", "🎬 Hmong Film": "🎬 Película Hmong", "🤝 Local Resources": "🤝 Recursos locales", "🌏 Hmong Language Resources": "🌏 Recursos en idioma Hmong", "❓ Community Q&A": "❓ Preguntas y respuestas comunitarias", "Community Partners": "Socios comunitarios", "Working Together for a More Dementia-Friendly Community": "Trabajando juntos por una comunidad más amigable con la demencia", "This initiative is made possible through collaboration among public service, aging, health, community, and nonprofit partners.": "Esta iniciativa es posible gracias a la colaboración de socios de servicios públicos, envejecimiento, salud, comunidad y organizaciones sin fines de lucro.", "Milwaukee County Department of Health & Human Services": "Departamento de Salud y Servicios Humanos del Condado de Milwaukee", "Aging & Disabilities Services": "Servicios para Personas Mayores y con Discapacidades", "Aging & Disability Resource Center of Milwaukee County": "Centro de Recursos para Personas Mayores y con Discapacidades del Condado de Milwaukee", "Local resource connection for older adults, people with disabilities, caregivers, and families.": "Conexión local a recursos para adultos mayores, personas con discapacidades, cuidadores y familias.", "Milwaukee Community Crossroads": "Milwaukee Community Crossroads", "Community-based healthy aging, wellness, and family support partner.": "Socio comunitario de envejecimiento saludable, bienestar y apoyo familiar.", "Alzheimer's Association Wisconsin Chapter": "Capítulo de Wisconsin de la Asociación de Alzheimer", "Dementia education, caregiver support, care consultation, and 24/7 helpline resources.": "Educación sobre demencia, apoyo para cuidadores, consulta de cuidado y línea de ayuda 24/7.", "Wisconsin Chinese Chamber of Commerce": "Cámara de Comercio China de Wisconsin", "Community convener supporting outreach, education, and culturally responsive programming.": "Convocante comunitario que apoya la difusión, educación y programación culturalmente apropiada.", "Watch & Share": "Ver y compartir", "My Mother “Kuv Nam”: A Hmong Story on Dementia": "Mi Madre “Kuv Nam”: Una Historia Hmong sobre la Demencia", "This Hmong dementia film helps families begin natural conversations about memory loss, aging, caregiving, and dementia.": "Esta película Hmong sobre la demencia ayuda a las familias a iniciar conversaciones naturales sobre la pérdida de memoria, el envejecimiento, el cuidado y la demencia.", "Open on YouTube": "Abrir en YouTube", "Download Education Materials": "Descargar materiales educativos", "Understand Dementia": "Comprender la demencia", "Awareness Helps Families Take Action Earlier": "La conciencia ayuda a las familias a actuar más temprano", "Dementia describes changes in memory, thinking, communication, and reasoning that interfere with daily life. It is caused by disease in the brain and is not a normal part of aging.": "La demencia describe cambios en la memoria, el pensamiento, la comunicación y el razonamiento que interfieren con la vida diaria. Es causada por enfermedades del cerebro y no es una parte normal del envejecimiento.", "Common Signs": "Señales comunes", "Memory loss affecting daily life": "Pérdida de memoria que afecta la vida diaria", "Difficulty completing familiar tasks": "Dificultad para completar tareas conocidas", "Confusion about time or place": "Confusión sobre el tiempo o el lugar", "New problems with words": "Nuevos problemas para encontrar palabras", "Mood or personality changes": "Cambios de ánimo o personalidad", "Other Causes of Memory Loss": "Otras causas de pérdida de memoria", "Depression": "Depresión", "Medication side effects": "Efectos secundarios de medicamentos", "Infections": "Infecciones", "Hearing or vision problems": "Problemas de audición o visión", "Sleep problems or poor nutrition": "Problemas de sueño o mala nutrición", "Why Early Diagnosis Matters": "Por qué importa el diagnóstico temprano", "Get an accurate diagnosis": "Obtener un diagnóstico preciso", "Access support sooner": "Acceder a apoyo más pronto", "Understand the disease": "Comprender la enfermedad", "Plan for care and lifestyle changes": "Planificar el cuidado y cambios de estilo de vida", "Improve quality of life": "Mejorar la calidad de vida", "Communication Tip": "Consejo de comunicación", "Remember SLOWER": "Recuerde SLOWER", "Small changes in how we communicate can make conversations safer, calmer, and more respectful for someone living with dementia.": "Pequeños cambios en la forma de comunicarnos pueden hacer que las conversaciones sean más seguras, tranquilas y respetuosas para una persona que vive con demencia.", "Smile": "Sonreír", "Listen": "Escuchar", "One thing at a time": "Una cosa a la vez", "Words clear": "Palabras claras", "Eye contact": "Contacto visual", "Remain calm": "Mantener la calma", "Local Resources": "Recursos locales", "Connect with Trusted Milwaukee Resources": "Conéctese con recursos confiables de Milwaukee", "Families and caregivers do not have to navigate dementia alone. These local and statewide resources can help.": "Las familias y los cuidadores no tienen que enfrentar la demencia solos. Estos recursos locales y estatales pueden ayudar.", "ADRC of Milwaukee County": "ADRC del Condado de Milwaukee", "The local resource for older adults, individuals with disabilities, caregivers, and families.": "Recurso local para adultos mayores, personas con discapacidades, cuidadores y familias.", "Phone:": "Teléfono:", "Community-based support for healthy aging, wellness, and family connection.": "Apoyo comunitario para el envejecimiento saludable, bienestar y conexión familiar.", "Address:": "Dirección:", "Direct:": "Directo:", "Cell:": "Celular:", "Website:": "Sitio web:", "Education, caregiver support, care consultation, and a 24/7 helpline.": "Educación, apoyo para cuidadores, consulta de cuidado y línea de ayuda 24/7.", "24/7 Helpline:": "Línea de ayuda 24/7:", "Download Center": "Centro de descargas", "Bilingual Hmong Dementia Education Materials": "Materiales bilingües Hmong sobre la demencia", "Add your uploaded PDF links to these buttons after publishing the files on your website.": "Agregue los enlaces de sus PDF a estos botones después de publicar los archivos en su sitio web.", "Building a Dementia Friendly Hmong Community": "Construyendo una comunidad Hmong amigable con la demencia", "Awareness flyer with film information and community education messaging.": "Volante de concientización con información de la película y mensajes educativos comunitarios.", "Download PDF": "Descargar PDF", "Dementia Friendly Communication Guide": "Guía de comunicación amigable con la demencia", "Practical communication tips for supporting someone living with dementia.": "Consejos prácticos de comunicación para apoyar a alguien que vive con demencia.", "Memory Changes & Early Warning Signs": "Cambios de memoria y señales tempranas", "Education on symptoms, possible causes, and the benefits of seeing a doctor.": "Educación sobre síntomas, posibles causas y los beneficios de consultar a un médico.", "Educational Resources & Special Thanks": "Recursos educativos y agradecimientos especiales", "We gratefully acknowledge the": "Agradecemos sinceramente al", "Aging & Disability Resource Center (ADRC) of Dane County": "Centro de Recursos para Personas Mayores y con Discapacidades (ADRC) del Condado de Dane", "and": "y a", "Nyob Zoo TV": "Nyob Zoo TV", "for developing the Hmong dementia educational materials and producing the award-winning film": "por desarrollar los materiales educativos Hmong sobre la demencia y producir la película premiada", "“My Mother (Kuv Nam): A Hmong Story on Dementia.”": "“My Mother (Kuv Nam): Una historia Hmong sobre la demencia.”", "Their leadership in creating culturally and linguistically appropriate dementia education has helped communities across Wisconsin increase awareness, reduce stigma, and encourage early conversations about dementia.": "Su liderazgo al crear educación sobre la demencia cultural y lingüísticamente apropiada ha ayudado a comunidades en todo Wisconsin a aumentar la conciencia, reducir el estigma y fomentar conversaciones tempranas sobre la demencia.", "This initiative is presented through the collaboration of the": "Esta iniciativa se presenta mediante la colaboración de", "Milwaukee County Department of Health & Human Services – Aging & Disabilities Services": "Departamento de Salud y Servicios Humanos del Condado de Milwaukee – Servicios para Personas Mayores y con Discapacidades", "Aging & Disability Resource Center (ADRC) of Milwaukee County": "Centro de Recursos para Personas Mayores y con Discapacidades (ADRC) del Condado de Milwaukee", "Milwaukee Community Crossroads (MCC)": "Milwaukee Community Crossroads (MCC)", "Wisconsin Chinese Chamber of Commerce (WCCC)": "Cámara de Comercio China de Wisconsin (WCCC)", "to expand dementia awareness and support Hmong families throughout Milwaukee County and beyond.": "para ampliar la conciencia sobre la demencia y apoyar a las familias Hmong en el Condado de Milwaukee y más allá.", "Together, We Can Build a Dementia Friendly Community": "Juntos podemos construir una comunidad amigable con la demencia", "Join us on October 29 in Milwaukee to learn, connect, support caregivers, and help create a healthier future for Hmong families and communities across Wisconsin.": "Acompáñenos el 29 de octubre en Milwaukee para aprender, conectar, apoyar a los cuidadores y ayudar a crear un futuro más saludable para las familias Hmong y comunidades de Wisconsin.", "Join the October 29 Event": "Únase al evento del 29 de octubre", "Get Support": "Obtener apoyo", "Other Languages / Auto Translation": "Otros idiomas / Google Translate", "For additional languages, use your browser's built-in translation feature. In Chrome or Edge, right-click the page and choose": "Para otros idiomas, use la función de traducción integrada de su navegador. En Chrome o Edge, haga clic derecho en la página y seleccione", "Translate": "Traducir", "Translation is provided for convenience. For medical questions, please consult a qualified healthcare professional or contact a local resource partner. Google Translate works best after this page is published on a public website.": "La traducción se ofrece por conveniencia. Para preguntas médicas, consulte con un profesional de salud calificado o contacte a un socio local de recursos. Google Translate funciona mejor después de publicar esta página en un sitio web público.", "Close": "Cerrar"}};
+
+    const autoMessage = {
+      en: 'English, Hmong, Chinese, and Spanish are built directly into this page. For all other languages, use the Google Translate dropdown in the top menu.',
+      hmn: 'Lus Askiv, Hmoob, Suav, thiab Mev twb muaj txhais ncaj qha rau hauv nplooj ntawv no. Rau lwm hom lus, siv lub Google Translate dropdown saum toj.',
+      zh: '英文、苗语、中文和西班牙语已直接内置在本页面中。其他语言请使用顶部菜单中的 Google Translate 下拉选单。',
+      es: 'Inglés, Hmong, Chino y Español están integrados directamente en esta página. Para otros idiomas, use el menú desplegable de Google Translate en la parte superior.'
+    };
+
+    const visitorNote = {
+      en: 'Translation is provided for convenience. For medical questions, please consult a qualified healthcare professional or contact a local resource partner. Google Translate works best after this page is published on a public website.',
+      hmn: 'Kev txhais lus yog pab kom yooj yim xwb. Yog muaj lus nug txog kev kho mob, thov tham nrog kws kho mob lossis hu rau ib qho kev pab hauv zos. Google Translate yuav ua haujlwm zoo tshaj thaum nplooj ntawv no tso rau lub website pej xeem.',
+      zh: '翻译仅为方便理解。如有医疗问题，请咨询合格医疗专业人员或联系本地资源伙伴。页面发布到公开网站后，Google Translate 效果最佳。',
+      es: 'La traducción se ofrece por conveniencia. Para preguntas médicas, consulte con un profesional de salud calificado o contacte a un socio local de recursos. Google Translate funciona mejor después de publicar esta página en un sitio web público.'
+    };
+
+    const textNodes = [];
+
+    function collectTextNodes(root) {
+      const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+        acceptNode(node) {
+          const parent = node.parentElement;
+          if (!parent || ['SCRIPT', 'STYLE', 'TEXTAREA', 'OPTION'].includes(parent.tagName)) {
+            return NodeFilter.FILTER_REJECT;
+          }
+          if (!node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+          return NodeFilter.FILTER_ACCEPT;
+        }
+      });
+
+      let node;
+      while ((node = walker.nextNode())) {
+        textNodes.push({ node, original: node.nodeValue });
+      }
+    }
+
+    function translateTextNode(item, lang) {
+      const original = item.original;
+      const leading = original.match(/^\s*/)[0];
+      const trailing = original.match(/\s*$/)[0];
+      const compact = original.trim().replace(/\s+/g, ' ');
+
+      if (lang === 'en') {
+        item.node.nodeValue = original;
+        return;
+      }
+
+      const translated = directTranslations[lang] && directTranslations[lang][compact];
+      item.node.nodeValue = translated ? `${leading}${translated}${trailing}` : original;
+    }
+
+    function setLanguage(lang) {
+      document.documentElement.lang = lang === 'hmn' ? 'hmn' : lang;
+      textNodes.forEach(item => translateTextNode(item, lang));
+
+      translationTitle.textContent = lang === 'hmn' ? 'Lwm hom lus / Google Translate' : lang === 'zh' ? '其他语言 / Google Translate' : lang === 'es' ? 'Otros idiomas / Google Translate' : 'Other Languages / Google Translate';
+      translationMessage.textContent = autoMessage[lang] || autoMessage.en;
+      translationNote.value = visitorNote[lang] || visitorNote.en;
+      openGoogleTranslate.href = buildGoogleTranslateUrl('auto');
+    }
+
+    function showGoogleTranslateOptions() {
+      const currentLang = document.documentElement.lang === 'hmn' ? 'hmn' : (document.documentElement.lang || 'en');
+      translationTitle.textContent = currentLang === 'hmn' ? 'Lwm hom lus / Google Translate' : currentLang === 'zh' ? '其他语言 / Google Translate' : currentLang === 'es' ? 'Otros idiomas / Google Translate' : 'Other Languages / Google Translate';
+      translationMessage.textContent = autoMessage[currentLang] || autoMessage.en;
+      translationNote.value = visitorNote[currentLang] || visitorNote.en;
+      openGoogleTranslate.href = buildGoogleTranslateUrl('auto');
+      translationBox.classList.add('open');
+    }
+
+    collectTextNodes(document.body);
+
+    languageSelect.addEventListener('change', function () {
+      setLanguage(this.value);
+    });
+
+    googleTranslateSelect.addEventListener('change', function () {
+      if (!this.value) return;
+      openGoogleTranslateFor(this.value);
+      this.value = '';
+    });
+
+    openGoogleTranslate.href = buildGoogleTranslateUrl('auto');
+
+    closeTranslate.addEventListener('click', function () {
+      translationBox.classList.remove('open');
+    });
+  </script>
+</body>
+</html>
