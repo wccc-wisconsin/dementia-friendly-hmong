@@ -266,8 +266,13 @@
       min-height: 100%;
       transform: translate(-50%, -50%);
       pointer-events: none;
-      opacity: 0.56;
+      opacity: 0;
       z-index: 0;
+      animation: videoFadeIn 1s ease 2.5s forwards;
+    }
+
+    @keyframes videoFadeIn {
+      to { opacity: 0.56; }
     }
 
     .hero-video iframe {
