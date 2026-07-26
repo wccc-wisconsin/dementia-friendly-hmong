@@ -883,10 +883,11 @@
     }
 
     @media (max-width: 640px) {
-      .topbar { top: 10px; width: calc(100% - 20px); border-radius: 24px; align-items: center; }
+      .topbar { top: 10px; width: calc(100% - 20px); border-radius: 999px; align-items: center; }
       .brand span:last-child { display: none; }
-      .language-wrap { flex: 1; justify-content: flex-end; }
-      .language-select { max-width: 135px; }
+      .language-wrap { flex: 1; justify-content: flex-end; gap: 6px; }
+      .language-select { max-width: 120px; }
+      .google-language-select { display: none; }
       .hero { padding-top: 130px; min-height: 92vh; }
       .section { padding: 64px 0; }
       .event-panel, .ack-panel { padding: 28px; border-radius: 26px; }
