@@ -914,6 +914,9 @@
       <a href="#resources" class="mobile-nav-link">Resources</a>
       <a href="#partners" class="mobile-nav-link">Partners</a>
       <a href="#acknowledgements" class="mobile-nav-link">Acknowledgements</a>
+      <hr style="border:none;border-top:1px solid #e5e7eb;margin:8px 0;">
+      <label style="font-size:0.8rem;font-weight:700;color:#64748b;padding:0 16px 4px;display:block;">🌐 Other Languages</label>
+      <select id="mobileGoogleTranslateSelect" class="language-select" aria-label="Select another language with Google Translate" style="margin:0 16px;width:calc(100% - 32px);max-width:none;border-radius:12px;"></select>
     </div>
   </div>
 
@@ -1551,6 +1554,17 @@
 
     closeTranslate.addEventListener('click', function () {
       translationBox.classList.remove('open');
+    });
+
+    // Sync mobile Google Translate select options from desktop one
+    const mobileGTSelect = document.getElementById('mobileGoogleTranslateSelect');
+    Array.from(googleTranslateSelect.options).forEach(function(opt) {
+      mobileGTSelect.appendChild(opt.cloneNode(true));
+    });
+    mobileGTSelect.addEventListener('change', function() {
+      if (!this.value) return;
+      openGoogleTranslateFor(this.value);
+      this.value = '';
     });
 
     // Hamburger menu
