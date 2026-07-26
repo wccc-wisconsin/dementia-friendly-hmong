@@ -8,6 +8,10 @@
   <meta property="og:title" content="Building a Dementia Friendly Hmong Community and Beyond" />
   <meta property="og:description" content="Community education, dementia awareness, caregiver support, and local Milwaukee County resources for Hmong families." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://dementia-friendly-hmong.vercel.app/og-preview.png" />
+  <meta property="og:url" content="https://dementia-friendly-hmong.vercel.app" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://dementia-friendly-hmong.vercel.app" />
   <meta name="theme-color" content="#312e81" />
 
   <style>
@@ -812,8 +816,65 @@
 
     .skip-link:focus { top: 16px; }
 
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 36px;
+      height: 36px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+    .hamburger span {
+      display: block;
+      height: 2px;
+      background: var(--purple);
+      border-radius: 2px;
+      transition: all 0.25s;
+    }
+    .hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(17,24,39,0.5);
+      z-index: 998;
+      backdrop-filter: blur(2px);
+    }
+    .mobile-nav.open { display: block; }
+    .mobile-nav-panel {
+      position: absolute;
+      top: 0; right: 0;
+      width: min(280px, 85vw);
+      height: 100%;
+      background: white;
+      padding: 80px 28px 32px;
+      box-shadow: -8px 0 40px rgba(0,0,0,0.15);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .mobile-nav-panel a {
+      text-decoration: none;
+      color: var(--purple);
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 12px 16px;
+      border-radius: 12px;
+    }
+    .mobile-nav-panel a:hover { background: #eef2ff; }
+
     @media (max-width: 980px) {
       .nav { display: none; }
+      .hamburger { display: flex; }
       .mobile-note { display: block; }
       .grid-2, .grid-3, .grid-4, .event-layout { grid-template-columns: 1fr; }
       .partners-grid { grid-template-columns: repeat(2, 1fr); }
@@ -845,6 +906,17 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <div id="mobileNav" class="mobile-nav" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="mobile-nav-panel">
+      <a href="#event" class="mobile-nav-link">Event</a>
+      <a href="#film" class="mobile-nav-link">Film</a>
+      <a href="#learn" class="mobile-nav-link">Learn</a>
+      <a href="#resources" class="mobile-nav-link">Resources</a>
+      <a href="#partners" class="mobile-nav-link">Partners</a>
+      <a href="#acknowledgements" class="mobile-nav-link">Acknowledgements</a>
+    </div>
+  </div>
+
   <div class="page">
     <header class="topbar" aria-label="Site navigation">
       <a class="brand" href="#top" aria-label="Back to top">
@@ -860,6 +932,10 @@
         <a href="#partners">Partners</a>
         <a href="#acknowledgements">Acknowledgements</a>
       </nav>
+
+      <button class="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav" id="hamburgerBtn">
+        <span></span><span></span><span></span>
+      </button>
 
       <div class="language-wrap">
         <label for="languageSelect">🌐</label>
@@ -1475,6 +1551,32 @@
 
     closeTranslate.addEventListener('click', function () {
       translationBox.classList.remove('open');
+    });
+
+    // Hamburger menu
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    function openMenu() {
+      mobileNav.classList.add('open');
+      hamburgerBtn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+      mobileNav.classList.remove('open');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    hamburgerBtn.addEventListener('click', function () {
+      mobileNav.classList.contains('open') ? closeMenu() : openMenu();
+    });
+    mobileNav.addEventListener('click', function (e) {
+      if (e.target === mobileNav) closeMenu();
+    });
+    document.querySelectorAll('.mobile-nav-link').forEach(function (link) {
+      link.addEventListener('click', closeMenu);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeMenu();
     });
   </script>
 </body>
