@@ -882,6 +882,12 @@
       .event-feature { margin-top: -34px; }
     }
 
+    @media (max-width: 700px) {
+      #featured-guest [style*="grid-template-columns:200px"] { grid-template-columns: 1fr !important; }
+      #featured-guest [style*="grid-template-columns:180px"] { grid-template-columns: 1fr !important; }
+      #featured-guest [style*="grid-template-columns:200px"] > div:first-child { margin-bottom: 8px; }
+    }
+
     @media (max-width: 640px) {
       .topbar { top: 10px; width: calc(100% - 20px); border-radius: 999px; align-items: center; }
       .brand span:last-child { display: none; }
@@ -1155,6 +1161,92 @@
           </div>
         </div>
       </section>
+
+      <!-- Dr. Linda Gerdner Featured Guest Section -->
+      <section class="section" id="featured-guest" style="background:linear-gradient(135deg,#fffbeb 0%,#fef3c7 50%,#ecfeff 100%);padding:80px 0;">
+        <div class="container">
+
+          <div style="text-align:center;margin-bottom:48px;">
+            <span class="eyebrow" style="color:var(--teal);">✨ Special Guest</span>
+            <h2 style="color:var(--purple);font-size:clamp(1.9rem,4vw,3rem);margin:8px 0 12px;letter-spacing:-0.03em;">Meet Our Featured Author</h2>
+            <p style="color:var(--muted);font-size:1.05rem;max-width:620px;margin:0 auto;">Joining us in Milwaukee for the October 29 Community Education & Awareness Event</p>
+          </div>
+
+          <!-- Bio panel -->
+          <div style="background:rgba(255,255,255,0.9);border-radius:var(--radius);box-shadow:var(--shadow);padding:40px;max-width:960px;margin:0 auto 36px;border:1px solid rgba(49,46,129,0.10);">
+            <div style="display:grid;grid-template-columns:200px 1fr;gap:36px;align-items:start;">
+
+              <!-- Photo placeholder — replace src with actual photo URL -->
+              <div style="text-align:center;flex-shrink:0;">
+                <div style="width:160px;height:160px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--teal));display:flex;align-items:center;justify-content:center;margin:0 auto 14px;box-shadow:0 8px 24px rgba(49,46,129,0.25);">
+                  <span style="font-size:3rem;font-weight:900;color:white;letter-spacing:-0.04em;">LG</span>
+                </div>
+                <div style="display:inline-block;background:#fef3c7;border:1px solid #fbbf24;border-radius:12px;padding:6px 14px;font-size:0.78rem;font-weight:800;color:#92400e;letter-spacing:0.06em;text-transform:uppercase;">PhD · RN · FAAN</div>
+              </div>
+
+              <!-- Bio text -->
+              <div>
+                <h3 style="font-size:clamp(1.5rem,3vw,2rem);color:var(--purple);margin:0 0 4px;letter-spacing:-0.03em;">Dr. Linda Gerdner</h3>
+                <p style="color:var(--teal);font-weight:700;font-size:0.95rem;margin:0 0 18px;">Ethnogeriatric Specialist &nbsp;·&nbsp; Author &nbsp;·&nbsp; Dementia Care Researcher<br><span style="color:var(--muted);font-weight:600;">Stanford Geriatric Education Center</span></p>
+                <p style="color:#374151;line-height:1.7;margin:0 0 14px;">We are honored to welcome Dr. Linda Gerdner to Milwaukee for our October 29 Community Education & Awareness Event. Dr. Gerdner is nationally recognized for her work in dementia care, ethnogeriatrics, culturally responsive aging, caregiver support, and Hmong American health and wellness.</p>
+                <p style="color:#374151;line-height:1.7;margin:0;">Her work has helped advance understanding of how culture, family traditions, storytelling, and community can shape the experience of dementia and caregiving — creating bridges between generations and between healthcare systems and the communities they serve.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Meet the Author & Book Signing callout -->
+          <div style="background:var(--purple);border-radius:var(--radius);box-shadow:var(--shadow);padding:40px;max-width:960px;margin:0 auto 36px;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:-40px;right:-40px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,0.05);pointer-events:none;"></div>
+            <div style="position:absolute;bottom:-30px;left:-30px;width:140px;height:140px;border-radius:50%;background:rgba(250,204,21,0.10);pointer-events:none;"></div>
+
+            <div style="text-align:center;margin-bottom:32px;position:relative;">
+              <span style="display:inline-block;font-size:1.8rem;margin-bottom:8px;">✍️</span>
+              <h3 style="color:var(--gold);font-size:clamp(1.4rem,3vw,1.9rem);margin:0 0 8px;letter-spacing:-0.02em;">Meet the Author &amp; Book Signing</h3>
+              <p style="color:rgba(255,255,255,0.80);font-size:1rem;max-width:580px;margin:0 auto;">Following the educational program, attendees will have a special opportunity to meet Dr. Linda Gerdner and participate in a book signing.</p>
+            </div>
+
+            <div style="display:grid;grid-template-columns:180px 1fr;gap:32px;align-items:start;position:relative;">
+
+              <!-- Book cover placeholder -->
+              <div style="text-align:center;">
+                <div style="background:linear-gradient(145deg,#fef3c7,#fde68a);border-radius:16px;padding:28px 18px;box-shadow:0 8px 24px rgba(0,0,0,0.25);border:1px solid rgba(255,255,255,0.2);">
+                  <div style="font-size:2rem;margin-bottom:10px;">📖</div>
+                  <div style="font-size:0.72rem;font-weight:900;color:#78350f;text-transform:uppercase;letter-spacing:0.08em;line-height:1.4;">Grandfather's<br>Story Cloth</div>
+                  <div style="font-size:0.65rem;color:#92400e;margin-top:6px;font-style:italic;">Yawg Daim Paj Ntaub<br>Dab Neeg</div>
+                </div>
+                <p style="color:rgba(255,255,255,0.5);font-size:0.7rem;margin:8px 0 0;font-style:italic;">Book cover shown at event</p>
+              </div>
+
+              <!-- Book info -->
+              <div>
+                <h4 style="color:white;font-size:1.2rem;margin:0 0 4px;">Grandfather's Story Cloth</h4>
+                <p style="color:var(--gold);font-style:italic;font-size:0.95rem;margin:0 0 14px;">Yawg Daim Paj Ntaub Dab Neeg</p>
+                <p style="color:rgba(255,255,255,0.85);line-height:1.7;margin:0 0 14px;font-size:0.95rem;">This bilingual Hmong-English picture book tells the story of a family experiencing Alzheimer's disease — through the relationship between a grandfather and his grandson. Through a traditional Hmong story cloth, memories of the grandfather's life in Laos come alive, creating a meaningful connection between generations while helping families better understand dementia.</p>
+                <p style="color:rgba(255,255,255,0.85);line-height:1.7;margin:0 0 20px;font-size:0.95rem;">Presented in Hmong and English, the book brings together dementia education, family caregiving, cultural tradition, storytelling, and the enduring bond between generations.</p>
+                <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px;">
+                  <span style="background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.90);border-radius:999px;padding:4px 14px;font-size:0.8rem;">Bilingual: Hmong &amp; English</span>
+                  <span style="background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.90);border-radius:999px;padding:4px 14px;font-size:0.8rem;">Alzheimer's &amp; Dementia Awareness</span>
+                  <span style="background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.90);border-radius:999px;padding:4px 14px;font-size:0.8rem;">Hmong Culture &amp; Family Caregiving</span>
+                  <span style="background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.90);border-radius:999px;padding:4px 14px;font-size:0.8rem;">Intergenerational Memory &amp; Storytelling</span>
+                </div>
+                <p style="color:rgba(255,255,255,0.60);font-size:0.82rem;margin:0 0 16px;">By Linda Gerdner &amp; Sarah Langford &nbsp;·&nbsp; Illustrated by Stuart Loughridge</p>
+                <a href="https://www.amazon.com/Grandfathers-Story-Cloth-Linda-Gerdner/dp/1885008651" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#1c1917;font-weight:800;font-size:0.9rem;padding:12px 22px;border-radius:999px;text-decoration:none;transition:opacity 0.2s;">📘 View the Book</a>
+              </div>
+            </div>
+
+            <div style="margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.15);text-align:center;position:relative;">
+              <p style="color:rgba(255,255,255,0.70);font-size:0.95rem;margin:0;">Join us for this special opportunity to meet Dr. Gerdner and celebrate a story deeply rooted in the Hmong community — <strong style="color:white;">book signing follows the educational program on October 29.</strong></p>
+            </div>
+          </div>
+
+          <!-- Register CTA -->
+          <div style="text-align:center;">
+            <a href="https://www.eventbrite.com/e/my-mother-kuv-nam-a-hmong-story-on-dementia-film-screening-tickets-1993015898202" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:1rem;padding:16px 32px;">Register for the October 29 Event</a>
+          </div>
+
+        </div>
+      </section>
+      <!-- /Dr. Linda Gerdner Featured Guest Section -->
 
       <section class="section" id="partners">
         <div class="container">
